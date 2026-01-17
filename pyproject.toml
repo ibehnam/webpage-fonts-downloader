@@ -36,8 +36,8 @@ dependencies = [
 webpage-fonts-downloader = "download_fonts:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/webpage-font-downloader"
-Repository = "https://github.com/yourusername/webpage-font-downloader"
+Homepage = "https://aplaceofmind.net"
+Repository = "https://github.com/ibehnam/webpage-fonts-downloader"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]

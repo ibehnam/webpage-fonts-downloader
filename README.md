@@ -12,14 +12,6 @@ Download and convert fonts used by any webpage.
 
 ## Installation
 
-### Homebrew (macOS/Linux)
-
-```bash
-brew install ibehnam/packages/webpage-font-downloader
-```
-
-### Using uv
-
 Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
 
 ```bash
@@ -31,15 +23,9 @@ The `webpage-font-downloader` command will be available globally.
 ### Install from Local Clone
 
 ```bash
-# Clone the repository
 git clone https://github.com/ibehnam/webpage-fonts-downloader.git
 cd webpage-fonts-downloader
-
-# Install the tool
 uv tool install .
-
-# Or install in editable mode for development
-uv tool install --editable .
 ```
 
 ## Usage
@@ -71,14 +57,6 @@ chmod +x download_fonts.py
 ```
 
 ## Uninstallation
-
-### Homebrew
-
-```bash
-brew uninstall webpage-font-downloader
-```
-
-### uv
 
 ```bash
 uv tool uninstall webpage-font-downloader

@@ -12,17 +12,29 @@ Download and convert fonts used by any webpage.
 
 ## Installation
 
-Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv):
+Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
+
+### Install from GitHub
 
 ```bash
-# Install from this repository
+uv tool install git+https://github.com/ibehnam/webpage-fonts-downloader.git
+```
+
+The `download-fonts` command will be available globally.
+
+### Install from Local Clone
+
+```bash
+# Clone the repository
+git clone https://github.com/ibehnam/webpage-fonts-downloader.git
+cd webpage-fonts-downloader
+
+# Install the tool
 uv tool install .
 
 # Or install in editable mode for development
 uv tool install --editable .
 ```
-
-The `download-fonts` command will be available globally.
 
 ## Usage
 

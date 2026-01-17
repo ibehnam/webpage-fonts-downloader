@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = { text = "MIT" }
 authors = [
-    { name = "Your Name", email = "your.email@example.com" },
+    { name = "Behnam Mohammadi", email = "see-my-homepage" },
 ]
 keywords = ["fonts", "web", "download", "woff2", "ttf"]
 classifiers = [

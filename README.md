@@ -12,9 +12,15 @@ Download and convert fonts used by any webpage.
 
 ## Installation
 
-Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
+### Homebrew (macOS/Linux)
 
-### Install from GitHub
+```bash
+brew install ibehnam/packages/webpage-font-downloader
+```
+
+### Using uv
+
+Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
 
 ```bash
 uv tool install git+https://github.com/ibehnam/webpage-fonts-downloader.git

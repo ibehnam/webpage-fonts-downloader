@@ -25,3 +25,8 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local configuration
+.claude/
+.codex/
+.opencode/

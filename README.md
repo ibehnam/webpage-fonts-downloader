@@ -15,28 +15,41 @@ Download and convert fonts used by any webpage.
 Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv):
 
 ```bash
-chmod +x download_fonts.py
+# Install from this repository
+uv tool install .
+
+# Or install in editable mode for development
+uv tool install --editable .
 ```
 
-Dependencies are auto-installed via `uv` on first run.
+The `download-fonts` command will be available globally.
 
 ## Usage
 
 ```bash
 # List fonts from a webpage
-./download_fonts.py https://example.com --list-only
+download-fonts https://example.com --list-only
 
 # Download serif fonts to ./economist
-./download_fonts.py https://www.economist.com/... --serif
+download-fonts https://www.economist.com/... --serif
 
 # Download and convert to TTF (macOS compatible)
-./download_fonts.py https://www.economist.com/... --serif --ttf
+download-fonts https://www.economist.com/... --serif --ttf
 
 # Download all font types to custom directory
-./download_fonts.py https://example.com --all -o ./my-fonts
+download-fonts https://example.com --all -o ./my-fonts
 
 # Verbose mode for debugging
-./download_fonts.py https://example.com --verbose
+download-fonts https://example.com --verbose
+```
+
+### Alternative: Run as a script (without installation)
+
+You can also run the script directly:
+
+```bash
+chmod +x download_fonts.py
+./download_fonts.py https://example.com --list-only
 ```
 
 ## Options
@@ -63,7 +76,7 @@ Dependencies are auto-installed via `uv` on first run.
 ## Example: The Economist
 
 ```bash
-./download_fonts.py --serif --ttf \
+download-fonts --serif --ttf \
   "https://www.economist.com/science-and-technology/2024/12/16/earth-is-warming-faster-scientists-are-closing-in-on-why"
 ```
 

@@ -4,31 +4,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Single-file Python script that downloads and converts fonts from webpages. Uses PEP 723 (`uv --script`) for self-installing dependencies.
+Python package that downloads and converts fonts from webpages. Installable via `uv tool install`.
 
 ## Development Commands
 
 ```bash
-# Run the script (dependencies auto-install via uv)
-./download_fonts.py <url> [options]
+# Install in editable mode
+uv tool install --editable .
+
+# Run the installed command
+download-fonts <url> [options]
 
 # Test on a simple site
-./download_fonts.py https://fonts.google.com/specimen/Roboto --list-only
+download-fonts https://fonts.google.com/specimen/Roboto --list-only
 
 # Test on bot-protected site (The Economist)
-./download_fonts.py "https://www.economist.com/..." --serif --ttf -v
+download-fonts "https://www.economist.com/..." --serif --ttf -v
 
-# Make executable after edits
-chmod +x download_fonts.py
+# Alternative: Run directly as a script without installing
+./download_fonts.py <url> [options]
 ```
 
 ## Architecture
 
-### Self-Contained Script Design
+### Package Structure
 
-- **PEP 723 metadata block** (lines 1-11): Embedded dependency specification for `uv --script` mode
-- Always use Python `>=3.13` in the `requires-python` field
-- Dependencies auto-install on first run; no separate `requirements.txt` or virtual env needed
+- **pyproject.toml**: Package metadata, dependencies, and build configuration
+  - Uses `hatchling` as the build backend
+  - Always use Python `>=3.13` in the `requires-python` field
+  - Entry point: `download-fonts` command → `download_fonts:main`
+- **download_fonts.py**: Single-file module containing all functionality
 
 ### Core Pipeline
 

@@ -1,15 +1,4 @@
-#!/usr/bin/env -S uv run --script
-# /// script
-# requires-python = ">=3.13"
-# dependencies = [
-#     "curl_cffi>=0.7",
-#     "beautifulsoup4>=4.12",
-#     "cssutils>=2.11",
-#     "pydantic>=2.0",
-#     "fonttools[woff]>=4.55",
-#     "brotli>=1.1",
-# ]
-# ///
+#!/usr/bin/env python3
 """
 Download fonts used by a webpage.
 

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "webpage-font-downloader"
+version = "0.1.0"
+description = "Download and convert fonts from webpages"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+keywords = ["fonts", "web", "download", "woff2", "ttf"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "curl_cffi>=0.7",
+    "beautifulsoup4>=4.12",
+    "cssutils>=2.11",
+    "pydantic>=2.0",
+    "fonttools[woff]>=4.55",
+    "brotli>=1.1",
+]
+
+[project.scripts]
+download-fonts = "download_fonts:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/webpage-font-downloader"
+Repository = "https://github.com/yourusername/webpage-font-downloader"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["download_fonts.py"]

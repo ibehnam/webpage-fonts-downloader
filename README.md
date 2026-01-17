@@ -26,7 +26,7 @@ Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
 uv tool install git+https://github.com/ibehnam/webpage-fonts-downloader.git
 ```
 
-The `download-fonts` command will be available globally.
+The `webpage-font-downloader` command will be available globally.
 
 ### Install from Local Clone
 
@@ -46,19 +46,19 @@ uv tool install --editable .
 
 ```bash
 # List fonts from a webpage
-download-fonts https://example.com --list-only
+webpage-font-downloader https://example.com --list-only
 
 # Download serif fonts to ./economist
-download-fonts https://www.economist.com/... --serif
+webpage-font-downloader https://www.economist.com/... --serif
 
 # Download and convert to TTF (macOS compatible)
-download-fonts https://www.economist.com/... --serif --ttf
+webpage-font-downloader https://www.economist.com/... --serif --ttf
 
 # Download all font types to custom directory
-download-fonts https://example.com --all -o ./my-fonts
+webpage-font-downloader https://example.com --all -o ./my-fonts
 
 # Verbose mode for debugging
-download-fonts https://example.com --verbose
+webpage-font-downloader https://example.com --verbose
 ```
 
 ### Alternative: Run as a script (without installation)
@@ -108,7 +108,7 @@ uv tool uninstall webpage-font-downloader
 ## Example: The Economist
 
 ```bash
-download-fonts --serif --ttf \
+webpage-font-downloader --serif --ttf \
   "https://www.economist.com/science-and-technology/2024/12/16/earth-is-warming-faster-scientists-are-closing-in-on-why"
 ```
 

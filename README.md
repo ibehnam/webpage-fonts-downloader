@@ -70,6 +70,20 @@ chmod +x download_fonts.py
 ./download_fonts.py https://example.com --list-only
 ```
 
+## Uninstallation
+
+### Homebrew
+
+```bash
+brew uninstall webpage-font-downloader
+```
+
+### uv
+
+```bash
+uv tool uninstall webpage-font-downloader
+```
+
 ## Options
 
 - `--serif`: Download only serif fonts

@@ -13,13 +13,13 @@ Python package that downloads and converts fonts from webpages. Installable via 
 uv tool install --editable .
 
 # Run the installed command
-webpage-font-downloader <url> [options]
+webpage-fonts-downloader <url> [options]
 
 # Test on a simple site
-webpage-font-downloader https://fonts.google.com/specimen/Roboto --list-only
+webpage-fonts-downloader https://fonts.google.com/specimen/Roboto --list-only
 
 # Test on bot-protected site (The Economist)
-webpage-font-downloader "https://www.economist.com/..." --serif --ttf -v
+webpage-fonts-downloader "https://www.economist.com/..." --serif --ttf -v
 
 # Alternative: Run directly as a script without installing
 ./download_fonts.py <url> [options]
@@ -32,7 +32,7 @@ webpage-font-downloader "https://www.economist.com/..." --serif --ttf -v
 - **pyproject.toml**: Package metadata, dependencies, and build configuration
   - Uses `hatchling` as the build backend
   - Always use Python `>=3.13` in the `requires-python` field
-  - Entry point: `webpage-font-downloader` command → `download_fonts:main`
+  - Entry point: `webpage-fonts-downloader` command → `download_fonts:main`
 - **download_fonts.py**: Single-file module containing all functionality
 
 ### Core Pipeline

@@ -33,7 +33,7 @@ dependencies = [
 ]
 
 [project.scripts]
-webpage-font-downloader = "download_fonts:main"
+webpage-fonts-downloader = "download_fonts:main"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/webpage-font-downloader"
